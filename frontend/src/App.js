@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import SelfAssessment from "./components/SelfAssesment";
-import Quiz from "./components/Quiz";
+import CareerQuiz from "./components/Quiz";
 
 const App = () => {
     return (
@@ -21,15 +21,15 @@ const App = () => {
 
                 <div className="flex-grow">
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/blogs" element={<Blogs />} />
-                        <Route path="/job-market" element={<JobMarket />} />
-                        <Route path="/salaries" element={<Salaries />} />
-                        <Route path="/upcoming-events" element={<UpcomingEvents />} />
-                        <Route path="/universities-info" element={<UniversitiesInfo />} />
-                        <Route path="/dashboard" element={<Dashboard />} />
-                        <Route path="/selfassessment" element={<SelfAssessment />} />
-                        <Route path="/quiz" element={<Quiz />} />
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/blogs" element={<Blogs/>}/>
+                        <Route path="/job-market" element={<JobMarket/>}/>
+                        <Route path="/salaries" element={<Salaries/>}/>
+                        <Route path="/upcoming-events" element={<UpcomingEvents/>}/>
+                        <Route path="/universities-info" element={<UniversitiesInfo/>}/>
+                        <Route path="/dashboard" element={<Dashboard/>}/>
+                        <Route path="/selfassessment" element={<SelfAssessment/>}/>
+                        <Route path="/quiz" element={<CareerQuiz/>}/>
                     </Routes>
                 </div>
 
