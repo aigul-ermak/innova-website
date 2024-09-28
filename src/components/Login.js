@@ -27,7 +27,7 @@ const Login = () => {
 
     return (
         <div
-            className="max-w-lg mx-auto bg-white dark:bg-white rounded-lg shadow-md px-8 py-10 flex flex-col items-center">
+            className="max-w-lg mx-auto bg-white dark:bg-white rounded-lg shadow-md px-8 py-10 mt-10 flex flex-col items-center">
             <h1 className="text-xl font-bold text-center text-black-700 dark:text-black-200 mb-8">
                 Login to AI Powered
             </h1>
