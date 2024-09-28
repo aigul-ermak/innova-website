@@ -11,6 +11,9 @@ import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import SelfAssessment from "./components/SelfAssesment";
 import CareerQuiz from "./components/Quiz";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import ProtectedRoute from "./components/Auth";
 
 const App = () => {
     return (
@@ -27,9 +30,20 @@ const App = () => {
                         <Route path="/salaries" element={<Salaries/>}/>
                         <Route path="/upcoming-events" element={<UpcomingEvents/>}/>
                         <Route path="/universities-info" element={<UniversitiesInfo/>}/>
-                        <Route path="/dashboard" element={<Dashboard/>}/>
                         <Route path="/selfassessment" element={<SelfAssessment/>}/>
                         <Route path="/quiz" element={<CareerQuiz/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/register" element={<Register/>}/>
+
+                        <Route
+                            path="/dashboard"
+                            element={
+                                <ProtectedRoute>
+                                    <Dashboard/>
+                                </ProtectedRoute>
+                            }
+                        />
+
                     </Routes>
                 </div>
 
