@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className="relative isolate flex flex-col items-center justify-center h-screen overflow-hidden">
+        <div className="relative isolate flex flex-col items-center justify-center overflow-hidden pt-10">
             <div className="flex flex-col items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
