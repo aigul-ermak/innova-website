@@ -72,7 +72,7 @@ const SelfAssessment = () => {
     return (
 
 
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+        <div className="min-h-screen flex flex-col items-center justify-center">
             <div className="question text-xl font-bold mb-4">{currentQuestion.question}</div>
             <div className="choices space-y-4">
                 {currentQuestion.choices.map((choice, index) => (

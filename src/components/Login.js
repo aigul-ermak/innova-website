@@ -11,16 +11,12 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        // Retrieve user info from sessionStorage
         const storedUser = JSON.parse(sessionStorage.getItem('user'));
 
         if (storedUser && storedUser.username === username && storedUser.password === password) {
-            // Set the login flag in sessionStorage
             sessionStorage.setItem('isLoggedIn', 'true');
-            // Redirect to dashboard
             navigate('/dashboard');
         } else {
-            // Show error if username or password doesn't match
             setError('Invalid username or password. Please try again.');
         }
     };
