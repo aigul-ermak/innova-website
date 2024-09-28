@@ -2,9 +2,9 @@ import React from 'react';
 
 const UpcomingEvents = () => {
     return (
-        <div>
-            <h2>Upcoming Events</h2>
-            <p>Stay tuned for upcoming events.</p>
+        <div className="flex flex-col items-center justify-center bg-gray-100 text-center">
+            <h2 className="text-3xl font-bold">Upcoming Events</h2>
+            <p className="text-lg mt-4">Stay tuned for upcoming events.</p>
         </div>
     );
 };

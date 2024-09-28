@@ -2,9 +2,9 @@ import React from 'react';
 
 const Salaries = () => {
     return (
-        <div>
-            <h2>Salaries</h2>
-            <p>Information about salaries in various industries.</p>
+        <div className="flex flex-col items-center justify-center bg-gray-100 text-center">
+            <h2 className="text-3xl font-bold">Salaries</h2>
+            <p className="text-lg mt-4">Information about salaries in various industries.</p>
         </div>
     );
 };
