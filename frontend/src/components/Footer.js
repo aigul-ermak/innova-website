@@ -3,7 +3,6 @@ import {NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (
-        //<footer className="bg-blue-500 text-white py-4 text-center flex-shrink-0">
         <footer className="flex flex-col space-y-10 justify-center m-10">
 
             <nav className="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
