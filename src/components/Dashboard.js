@@ -5,12 +5,10 @@ const Dashboard = () => {
     return (
         <div className="text-center py-12 px-4">
             <h2 className="text-2xl font-bold">Get In Touch</h2>
-            {/*<p className="mt-4 text-gray-700 max-w-2xl mx-auto">We are here to help you. Reach out to us via any of the*/}
-            {/*    following methods.</p>*/}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 animate-fadeIn">
                 <div className="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
-                    <Link to='/selfassessment' exact>
+                    <Link to='/selfassessment'>
                         <button
                             className='text-xl font-bold'>
                             <span>Self Assessment</span>
