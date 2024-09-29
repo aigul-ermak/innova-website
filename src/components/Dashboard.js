@@ -17,7 +17,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
-                    <Link to='/quiz' exact>
+                    <Link to='/quiz'>
                         <button
                             className='text-xl font-bold'>
                             <span>Career Quiz</span>
@@ -26,7 +26,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
-                    <Link to='#' exact>
+                    <Link to='#'>
                         <button
                             className='text-xl font-bold'>
                             <span>Chat with AI</span>
