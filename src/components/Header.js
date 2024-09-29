@@ -1,19 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Link, NavLink, useNavigate} from 'react-router-dom';
 
-const Header = () => {
+const Header = ({isLoggedIn, handleLogout}) => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const loggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-        setIsLoggedIn(loggedIn);
-    }, []);
-
-    const handleLogout = () => {
-        setIsLoggedIn(false);
+    const onLogout = () => {
+        handleLogout();
         navigate('/');
     };
 
@@ -61,25 +55,17 @@ const Header = () => {
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
                     {isLoggedIn ? (
-                        <>
-                            <button
-                                onClick={handleLogout}
+                        <button onClick={onLogout}
                                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">
-                                Logout
-                            </button>
-                        </>
+                            Logout
+                        </button>
                     ) : (
                         <>
-                            <Link
-                                to="/login"
-                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">
-                                Log in
-                            </Link>
-                            <Link
-                                to="/register"
-                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">
-                                Register
-                            </Link>
+                            <Link to="/login"
+                                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">Log
+                                in</Link>
+                            <Link to="/register"
+                                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500">Register</Link>
                         </>
                     )}
                 </div>

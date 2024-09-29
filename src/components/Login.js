@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'; // For redirection
+import {useNavigate} from 'react-router-dom';
 
-const Login = () => {
+const Login = ({handleLogin}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');  // For storing error message
+    const [error, setError] = useState(''); // For storing error message
 
-    const navigate = useNavigate();  // For navigation to dashboard
+    const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
 
         const storedUser = JSON.parse(sessionStorage.getItem('user'));
 
         if (storedUser && storedUser.username === username && storedUser.password === password) {
             sessionStorage.setItem('isLoggedIn', 'true');
+            handleLogin();
             navigate('/dashboard');
         } else {
             setError('Invalid username or password. Please try again.');
@@ -34,7 +35,7 @@ const Login = () => {
                 </div>
             )}
 
-            <form onSubmit={handleLogin} className="w-full flex flex-col gap-4">
+            <form onSubmit={onSubmit} className="w-full flex flex-col gap-4">
                 <div className="flex items-start flex-col justify-start">
                     <label htmlFor="username" className="text-sm text-black-700 dark:text-black-200 mr-2">
                         Username:
